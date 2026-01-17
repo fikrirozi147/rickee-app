@@ -45,17 +45,20 @@ python -m venv venv
 source venv/bin/activate  # (or venv\Scripts\activate on Windows)
 pip install -r requirements.txt
 python app.py
+```
 
 ### 2. Frontend (React Native)
+```bash
 cd rickee-app
 npm install
 npx expo start
+```
 
-🔮 Future Improvements
-Offline Mode: Porting lightweight OCR models (Tesseract) to run directly on the mobile device.
+## 🔮 Future Improvements
+* **Offline Mode:** Porting lightweight OCR models (Tesseract) to run directly on the mobile device.
 
-Community Database: Allow users to submit new Halal/Haram findings to improve the dataset.
+* **Community Database:** Allow users to submit new Halal/Haram findings to improve the dataset.
 
-Barcode Scanning: Integration with OpenFoodFacts API.
+* **Barcode Scanning:** Integration with OpenFoodFacts API.
 
-Built with ❤️ by Fikri Rozi
+# Built with ❤️ by Fikri Rozi
