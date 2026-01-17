@@ -61,4 +61,4 @@ npx expo start
 
 * **Barcode Scanning:** Integration with OpenFoodFacts API.
 
-# Built with ❤️ by Fikri Rozi
+### Built with ❤️ by Fikri Rozi
