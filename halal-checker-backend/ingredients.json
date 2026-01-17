@@ -1,0 +1,185 @@
+{
+  "haram_ingredients": [
+    {
+      "names": [
+        "lard",
+        "lemak babi",
+        "ラード",
+        "น้ำมันหมู",
+        "猪油",
+        "라드"
+      ],
+      "reason": "Pork fat"
+    },
+    {
+      "names": [
+        "pork",
+        "豚肉",
+        "猪肉",
+        "เนื้อหมู",
+        "daging babi",
+        "돼지고기"
+      ],
+      "reason": "Pork meat"
+    },
+    {
+      "names": [
+        "gelatin",
+        "明胶",
+        "젤라틴",
+        "ゼラチン",
+        "เจลาติน"
+      ],
+      "reason": "Derived from animal bones/skin (often non-halal)"
+    },
+    {
+      "names": [
+        "alcohol",
+        "แอลกอฮอล์",
+        "アルコール",
+        "酒精",
+        "술",
+        "alkohol"
+      ],
+      "reason": "Intoxicant"
+    },
+    {
+      "names": [
+        "wine",
+        "ワイン",
+        "와인",
+        "葡萄酒",
+        "ไวน์",
+        "wain"
+      ],
+      "reason": "Intoxicant"
+    },
+    {
+      "names": [
+        "rum",
+        "ラム酒",
+        "朗姆酒",
+        "เหล้ารัม",
+        "럼"
+      ],
+      "reason": "Alcoholic ingredient"
+    },
+    {
+      "names": [
+        "bacon",
+        "베이컨",
+        "熏肉",
+        "ベーコン",
+        "เบคอน"
+      ],
+      "reason": "Pork product"
+    },
+    {
+      "names": [
+        "ham",
+        "햄",
+        "แฮม",
+        "火腿",
+        "ハム"
+      ],
+      "reason": "Pork product"
+    },
+    {
+      "names": [
+        "shortening",
+        "短縮",
+        "การทำให้สั้นลง",
+        "단축",
+        "缩短",
+        "memendekkan"
+      ],
+      "reason": "Often animal-derived fats"
+    },
+    {
+      "names": [
+        "tallow",
+        "獣脂",
+        "ไข",
+        "脂",
+        "수지 양초"
+      ],
+      "reason": "Animal fat (beef/mutton) - requires Halal slaughter"
+    },
+    {
+      "names": [
+        "mirin",
+        "มิริน",
+        "みりん",
+        "미린",
+        "味醂"
+      ],
+      "reason": "Japanese rice wine (Alcohol)"
+    },
+    {
+      "names": [
+        "sake",
+        "동기",
+        "สาเก",
+        "demi",
+        "清酒",
+        "酒"
+      ],
+      "reason": "Japanese alcohol"
+    }
+  ],
+  "mushbooh_ingredients": [
+    {
+      "names": [
+        "emulsifier",
+        "乳化剂",
+        "유화제",
+        "pengemulsi",
+        "乳化剤",
+        "อิมัลซิไฟเออร์"
+      ],
+      "reason": "Could be plant or animal based"
+    },
+    {
+      "names": [
+        "lecithin",
+        "卵磷脂",
+        "lesitin",
+        "เลซิติน",
+        "レシチン",
+        "레시틴"
+      ],
+      "reason": "Usually soy, but sometimes animal"
+    },
+    {
+      "names": [
+        "rennet",
+        "走った",
+        "跑",
+        "달렸다",
+        "berlari",
+        "วิ่ง"
+      ],
+      "reason": "Enzyme from animal stomach (cheese)"
+    },
+    {
+      "names": [
+        "glycerin",
+        "gliserin",
+        "グリセリン",
+        "글리세린",
+        "甘油",
+        "กลีเซอรีน"
+      ],
+      "reason": "Could be animal or vegetable source"
+    },
+    {
+      "names": [
+        "whey",
+        "乳清",
+        "유장",
+        "เวย์"
+      ],
+      "reason": "By-product of cheese (check rennet source)"
+    }
+  ]
+}

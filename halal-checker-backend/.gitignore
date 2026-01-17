@@ -1,0 +1,12 @@
+# Ignore the Virtual Environment (Heavy folder!)
+venv/
+env/
+.env
+
+# Ignore Python Cache
+__pycache__/
+*.pyc
+
+# Ignore IDES
+.vscode/
+.idea/
