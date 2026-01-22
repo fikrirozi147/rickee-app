@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal, StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { BlurView } from 'expo-blur';
 
 interface ResultModalProps {
   visible: boolean;
@@ -12,109 +13,56 @@ interface ResultModalProps {
 
 export default function ResultModal({ visible, onClose, status, reason, color }: ResultModalProps) {
   
-  // Choose an icon based on status
   const getIcon = () => {
     if (status === 'Halal') return 'checkmark-circle';
     if (status === 'Haram') return 'alert-circle';
     if (status === 'Mushbooh') return 'help-circle';
-    return 'search'; // Default
+    return 'search'; 
   };
 
   return (
-    <Modal
-      animationType="slide"
-      transparent={true}
-      visible={visible}
-      onRequestClose={onClose}
-    >
-      <View style={styles.centeredView}>
-        {/* Dark Background Overlay */}
-        <View style={styles.backdrop} />
-
-        {/* The Modal Box */}
-        <View style={styles.modalView}>
+    <Modal animationType="fade" transparent={true} visible={visible} onRequestClose={onClose}>
+      {/* FULL SCREEN BLUR BACKGROUND */}
+      <BlurView intensity={40} tint="dark" style={styles.centeredView}>
+        
+        {/* GLASS CARD */}
+        <View style={[styles.modalView, { borderColor: color }]}>
           
-          {/* Header Icon */}
-          <Ionicons name={getIcon()} size={80} color={color} style={{ marginBottom: 10 }} />
+          <Ionicons name={getIcon()} size={70} color={color} style={{ marginBottom: 15 }} />
 
-          {/* Status Title (e.g., HALAL) */}
           <Text style={[styles.modalTitle, { color: color }]}>
             {status.toUpperCase()}
           </Text>
 
-          {/* Reason Text (Scrollable in case it's long) */}
           <ScrollView style={styles.scrollArea}>
             <Text style={styles.modalText}>
-              {reason || "No ingredients found."}
+              {reason || "No prohibited ingredients found."}
             </Text>
           </ScrollView>
 
-          {/* Close Button */}
-          <TouchableOpacity
-            style={[styles.button, { backgroundColor: color }]}
-            onPress={onClose}
-          >
+          <TouchableOpacity style={[styles.button, { backgroundColor: color }]} onPress={onClose}>
             <Text style={styles.textStyle}>SCAN AGAIN</Text>
           </TouchableOpacity>
+
         </View>
-      </View>
+      </BlurView>
     </Modal>
   );
 }
 
 const styles = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  backdrop: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0,0,0,0.7)', // Dim background
-  },
+  centeredView: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   modalView: {
-    width: '85%',
-    maxHeight: '60%',
-    backgroundColor: '#1E1E1E', // Dark grey card
-    borderRadius: 20,
-    padding: 25,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-    borderWidth: 1,
-    borderColor: '#333',
+    width: '85%', maxHeight: '65%',
+    backgroundColor: 'rgba(30, 30, 30, 0.85)', // Semi-transparent dark
+    borderRadius: 25, padding: 30, alignItems: 'center',
+    shadowColor: '#000', shadowOffset: { width: 0, height: 10 }, shadowOpacity: 0.5, shadowRadius: 20,
+    elevation: 10,
+    borderWidth: 1.5, // Thin colored border based on Halal/Haram
   },
-  modalTitle: {
-    marginBottom: 10,
-    textAlign: 'center',
-    fontSize: 28,
-    fontWeight: 'bold',
-  },
-  scrollArea: {
-    marginVertical: 15,
-    width: '100%',
-  },
-  modalText: {
-    color: '#DDD', // Light text
-    fontSize: 16,
-    textAlign: 'center',
-    lineHeight: 24,
-  },
-  button: {
-    borderRadius: 30,
-    paddingVertical: 12,
-    paddingHorizontal: 30,
-    elevation: 2,
-    marginTop: 10,
-    width: '100%',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    fontSize: 16,
-  },
+  modalTitle: { marginBottom: 10, textAlign: 'center', fontSize: 26, fontWeight: '800', letterSpacing: 1 },
+  scrollArea: { marginVertical: 10, width: '100%' },
+  modalText: { color: '#EEE', fontSize: 16, textAlign: 'center', lineHeight: 24, fontWeight: '500' },
+  button: { borderRadius: 30, paddingVertical: 14, paddingHorizontal: 30, elevation: 2, marginTop: 15, width: '100%', shadowOpacity: 0.3, shadowRadius: 5, shadowOffset: {width: 0, height: 4} },
+  textStyle: { color: 'white', fontWeight: 'bold', textAlign: 'center', fontSize: 16, letterSpacing: 1 },
 });

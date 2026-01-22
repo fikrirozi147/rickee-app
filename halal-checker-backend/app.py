@@ -155,7 +155,7 @@ def check_ingredients():
         
         return jsonify({
             "status": "Halal",
-            "reason": "No prohibited ingredients detected.\n(Scanned: " + scanned_text[:50] + "...)",
+            "reason": "Safe to consume. No haram ingredients found.",
             "color": "#4CAF50"
         })
 
