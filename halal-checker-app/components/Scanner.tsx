@@ -4,7 +4,8 @@ import { CameraView, useCameraPermissions } from 'expo-camera';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as ImagePicker from 'expo-image-picker';
-import { BlurView } from 'expo-blur'; // <--- The Magic Ingredient
+import { BlurView } from 'expo-blur';
+import { LinearGradient } from 'expo-linear-gradient';
 import ResultModal from './ResultModal';
 
 const REGIONS = [
@@ -113,7 +114,7 @@ export default function Scanner() {
   };
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={['#000000', '#434343']} style={styles.container}>
       {mode === 'camera' ? (
         <View style={StyleSheet.absoluteFill}>
           <CameraView style={StyleSheet.absoluteFill} ref={cameraRef} facing="back" />
@@ -181,12 +182,12 @@ export default function Scanner() {
       </BlurView>
 
       <ResultModal visible={modalVisible} onClose={() => setModalVisible(false)} status={scanResult.status} reason={scanResult.reason} color={scanResult.color} />
-    </View>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#000' },
+  container: { flex: 1 },
   center: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   
   // GLASS HEADER
