@@ -74,7 +74,7 @@ export default function HistoryScreen() {
         </Text>
 
         {/* Decorative Icon (Chevron) */}
-        <Ionicons name="chevron-forward" size={20} color="#555" style={styles.arrowIcon} />
+        {/* <Ionicons name="chevron-forward" size={20} color="#555" style={styles.arrowIcon} /> */}
         
       </BlurView>
     </TouchableOpacity>
@@ -82,9 +82,9 @@ export default function HistoryScreen() {
 
   return (
     <ImageBackground 
-      source={{ uri: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop' }} 
+      source={{ uri: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2000&auto=format&fit=crop' }} 
       style={styles.container}
-      blurRadius={60}
+      // blurRadius={10}
     >
       <View style={styles.darkOverlay} />
 
