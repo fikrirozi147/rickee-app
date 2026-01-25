@@ -49,12 +49,12 @@ export default function TabLayout() {
           title: 'Scanner',
           // I kept your SF Symbol name here. 
           // If you want a simpler camera icon, try "camera.fill" instead.
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="rectangle.and.text.magnifyingglass" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="viewfinder" color={color} />,
         }}
       />
       
       <Tabs.Screen
-        name="explore"
+        name="history"
         options={{
           title: 'History',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="clock.fill" color={color} />,
