@@ -12,7 +12,7 @@ Traveling Muslims often struggle to identify non-Halal ingredients (e.g., "Short
 ## ✨ Key Features
 * **📸 AI Camera Scan:** Instantly extracts text from product packaging using Optical Character Recognition (EasyOCR).
 * **🌍 Multi-Language Support:** Detects ingredients in **Latin** (EN/MS), **Japanese** (Kanji/Kana), **Korean** (Hangul), **Thai**, and **Chinese**.
-* **⚡ Region-Based Optimization:** Custom "Region Chips" allow users to select specific language models, reducing processing time by **90%** (from ~3 mins to <20s).
+* **⚡ Region-Based Optimization:** Custom "Region Chips" allow users to select specific language models, reducing processing time by **90%** (from ~15 mins to <10s).
 * **⌨️ Manual Search:** Quick fallback mode to type and check specific E-numbers or keywords.
 * **🛡️ Educational Feedback:** Doesn't just say "Haram"—explains *why* (e.g., "Contains Mirin: Japanese Rice Wine").
 
@@ -31,7 +31,7 @@ Traveling Muslims often struggle to identify non-Halal ingredients (e.g., "Short
 * **Architecture:** REST API with Base64 Image Processing
 
 ## 🧠 Engineering Highlights
-**Problem:** Running 5 simultaneous OCR models on high-resolution smartphone images (12MP) caused server timeouts (3+ minutes per scan).
+**Problem:** Running 5 simultaneous OCR models on high-resolution smartphone images (12MP) caused server timeouts (15+ minutes per scan).
 
 **Solution:**
 1.  **Image Pipeline Optimization:** Implemented server-side resizing (Lanczos resampling) to downscale images to ~1000px width, maintaining text clarity while reducing file size by 95%.
