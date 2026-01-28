@@ -2,12 +2,7 @@
 
 > A cross-platform mobile application that utilizes Machine Learning (OCR) to scan food packaging in 5+ languages and verify Halal compliance in real-time.
 
-![Scanner](https://github.com/user-attachments/assets/1ccb29d0-84a5-462f-abc8-dbe3da61f292) ![Manual scan](https://github.com/user-attachments/assets/80612d48-cd5b-4baa-80f0-588b50374946) ![Halal dialog](https://github.com/user-attachments/assets/e72fb3f3-f0a5-433d-8417-3b8ecbcb1c6d) ![Haram dialog](https://github.com/user-attachments/assets/44c2af53-d2d3-48b3-b3ab-884b2b6a0d39) ![Mushbooh dialog](https://github.com/user-attachments/assets/110ffe58-f75e-4d60-810e-a83688f695b0) ![History page](https://github.com/user-attachments/assets/0b581b32-bea6-48c7-8af6-c8bcfdca33d3)
-
-
-
-
-
+![Halal Scanner](https://github.com/user-attachments/assets/1ccb29d0-84a5-462f-abc8-dbe3da61f292)
 
 ## 🚀 Overview
 Traveling Muslims often struggle to identify non-Halal ingredients (e.g., "Shortening", "Mirin", "E471") in foreign countries where packaging uses complex scripts like Kanji or Hangul. 
