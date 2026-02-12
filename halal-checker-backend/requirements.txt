@@ -4,3 +4,8 @@ numpy
 opencv-python-headless
 pytesseract
 gunicorn
+easyocr
+json
+base64
+PIL
+io
