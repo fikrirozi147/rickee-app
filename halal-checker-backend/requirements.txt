@@ -2,9 +2,6 @@ flask
 flask-cors
 numpy
 opencv-python-headless
-pytesseract
 gunicorn
 easyocr
-base64
-PIL
-io
+Pillow
