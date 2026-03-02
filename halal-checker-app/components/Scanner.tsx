@@ -74,7 +74,7 @@ export default function Scanner() {
 
   const checkBackend = async (dataPayload: string, type: 'image' | 'text', region: string) => {
     try {
-      const LAPTOP_IP = "192.168.1.116"; 
+      const LAPTOP_IP = "192.168.1.102"; 
       const body = type === 'image' ? { image: dataPayload, region: region } : { text: dataPayload };
 
       const response = await fetch(`http://${LAPTOP_IP}:5000/check-ingredients`, {
